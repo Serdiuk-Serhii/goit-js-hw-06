@@ -9,10 +9,10 @@ function handleTextInput() {
     refs.spanEl.textContent = refs.inputEl.value.trim();
 };
 
-refs.inputEl.addEventListener('blur', handleInputBlur )
+refs.inputEl.addEventListener('input', handleInputCheck )
 
-function handleInputBlur() {
-    if (refs.inputEl.value === "") {
+function handleInputCheck() {
+    if (refs.inputEl.value.trim() === "") {
         refs.spanEl.textContent = 'Anonymous';
     };
 };
